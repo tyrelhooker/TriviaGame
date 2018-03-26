@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Creepster|Joti|Arvo+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo+One" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Trivia Game</title>
@@ -25,11 +26,10 @@
       <!-- hidden until startBtn click -->
       <div class="quizBox">
         <div class="timerBox">
-          <button id="timer">
+          <div id="timer">
             Time Remaining: 
-          </button>
+          </div>
         </div>
-        
         <form id="quiz" onsubmit="return onSubmit()">
           <div class="question" id="question1">
             <h3>In what book does a writer become hostage of his biggest fan who forces the writer to write another book?</h3>

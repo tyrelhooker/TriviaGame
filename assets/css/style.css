@@ -18,7 +18,7 @@ body {
   /* border: 1px solid blue; */
   text-align: center;
   font-family: 'Creepster','Joti One', Arial, Helvetica, sans-serif;
-  font-size: 50px;
+  font-size: 52px;
   margin-top: 0px;
   background: tomato; 
   padding: 25px 10px;
@@ -37,12 +37,13 @@ body {
   color: black;
   background:  tomato;
   padding: 15px;
+  margin: 40px 0;
 }
 
 .timerBox {
   text-align: center;
-  margin-right: 150px;
-  margin-left: 150px;
+  margin-right: 35px;
+  margin-left: 35px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -76,6 +77,7 @@ body {
   text-align: center;
   margin: 20px;
   font-size: 22px;
+  padding: 40px 0;
 }
 
 #correct, #wrong, #blank {
@@ -84,7 +86,7 @@ body {
 
 #submitBtn {
   font-family: 'Creepster','Joti One', Arial, Helvetica, sans-serif;
-  font-size: 28px;
+  font-size: 30px;
   color: black;
   background:  tomato; 
   padding: 15px;

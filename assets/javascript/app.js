@@ -2,20 +2,21 @@ var answersCorrect = 0;
 var answersWrong = 0;
 var unanswered = 0;
 var counter = answersCorrect;
-var timer;
+// var timer;
 var intervalId;
-var countDown = 30; // Need to set to 100 or 130
+var countDown = 60; 
 var answerKey = ["d", "c", "a", "b", "c", "c", "b", "d", "c", "a"];
 var playerAns = [];
 
 function run() {
+  playerAns = [];
   clearInterval(intervalId);
   intervalId = setInterval(decrement, 1000);
 }
 
 function decrement() {
   countDown--;
-  $("#timer").html("<p>" + countDown + "</p>");
+  $("#timer").html("<p> Time Remaining: " + countDown + "</p>");
   if (countDown === 0) {
     stop();
   }
