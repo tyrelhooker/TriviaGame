@@ -7,8 +7,6 @@ var intervalId;
 var countDown = 30; // Need to set to 100 or 130
 var answerKey = ["d", "c", "a", "b", "c", "c", "b", "d", "c", "a"];
 var playerAns = [];
-// var q1 = $('input[name=q1]:checked', '#quiz').val();
-// var q2 = $('input[name=q2]:checked', '#quiz').val();
 
 function run() {
   clearInterval(intervalId);
@@ -28,32 +26,10 @@ function stop() {
   $(".quizBox").hide();
   $(".resultsBox").show();
   quizCheck();
-  $("#correct").text("You answered " + answersCorrect + " questions!");
+  $("#correct").text("You answered " + answersCorrect + " questions correctly!");
   $("#wrong").text("You answered " + answersWrong + " questions incorrectly.");
   $("#blank").text("You did not answer " + unanswered + " questions.")
 }
-
-// Hides quiz box and results box on load of page
-$(".quizBox").hide();
-$(".resultsBox").hide();
-
-// Start on click
-$("#startBtn").on("click", function(){
-  run();
-  decrement();
-  $(".buttonBox").hide();
-
-  // Hide the beginning game screen and show the quiz
-  $("#startBtn").hide()
-  $(".quizBox").show();
-});
-
-$("#submitBtn").on("click", function() {
-  stop();
-});
-
-
-
 
 function quizCheck() {
   var ans1 = $('input[name=q1]:checked').val();
@@ -98,12 +74,28 @@ function ansCheck() {
   console.log("Num of wrong ans: " + answersWrong);
   console.log("Num of unanswered: " + unanswered);
 }
-//   if (question1 === radio.value["c"]) {
-//     answersCorrect++;
-//     console.log(q1);
-//   }
-// console.log(q1);
-// };
+
+//*****Start of Game*****
+// Hides quiz box and results box on load of page
+$(".quizBox").hide();
+$(".resultsBox").hide();
+
+// Start game on click, starts clock running
+$("#startBtn").on("click", function(){
+  run();
+  decrement();
+  $(".buttonBox").hide();
+  // Hides the beginning game screen and show the quiz
+  $("#startBtn").hide()
+  $(".quizBox").show();
+});
+
+// If player beats the clock and manually submits
+$("#submitBtn").on("click", function() {
+  stop();
+});
+
+
 
 
   

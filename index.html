@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Creepster|Joti|Arvo+One" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Trivia Game</title>
   </head>
@@ -23,14 +25,14 @@
       <!-- hidden until startBtn click -->
       <div class="quizBox">
         <div class="timerBox">
-          <div id="timer">
+          <button id="timer">
             Time Remaining: 
-          </div>
+          </button>
         </div>
+        
         <form id="quiz" onsubmit="return onSubmit()">
-
           <div class="question" id="question1">
-            <h3>In what book does a writer become hostage of his biggest fan who forces the writer to write another book?</h3> 
+            <h3>In what book does a writer become hostage of his biggest fan who forces the writer to write another book?</h3>
             <input type="radio" name="q1" value="a"> Christine
             <input type="radio" name="q1" value="b"> The Shining
             <input type="radio" name="q1" value="c"> Insomnia
@@ -63,10 +65,10 @@
 
           <div class="question" id="question5">
             <h3>In what book does a doctor move his family into a house next to an ancient burial ground?</h3> 
-            <input type="radio" name="q5" value="a">The Shining 
-            <input type="radio" name="q5" value="b">Carrie 
-            <input type="radio" name="q5" value="c">Pet Sematary 
-            <input type="radio" name="q5" value="d">Doctor Sleep
+            <input type="radio" name="q5" value="a"> The Shining 
+            <input type="radio" name="q5" value="b"> Carrie 
+            <input type="radio" name="q5" value="c"> Pet Sematary 
+            <input type="radio" name="q5" value="d"> Doctor Sleep
           </div>
 
           <div class="question" id="question6">
@@ -102,17 +104,19 @@
           </div>
 
           <div class="question" id="question10">
-            <h3>Which book is about a 1958 Plymouth Fury possessed by supernatural forces?</h3> 
+            <h3>Which book is about a 1958 Plymouth Fury possessed by supernatural forces?</h3>
             <input type="radio" name="q10" value="a"> Christine
             <input type="radio" name="q10" value="b"> Carrie 
             <input type="radio" name="q10" value="c"> Delores Claiborne
             <input type="radio" name="q10" value="d"> Mr. Mercedes
           </div>
-
+<!--  -->
         </form>
-        <button id="submitBtn">
-          Done!
-        </button>
+        <div class="buttonBox2">
+          <button id="submitBtn">
+            Done!
+          </button>
+        </div>
       </div>
 
       <!-- Hidden until time expires or onclick of submitBtn -->

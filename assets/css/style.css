@@ -1,16 +1,27 @@
 body {
-  background: 
+  background: url("../images/background2.jpg");
+  background-repeat: repeat;
+  /* background-size: 400px; */
+  font-family: 'Arvo', serif;
+  font-size: 18px;
 }
 
 .container {
-  width: 650px;
-  border: 1px solid orange;
-  margin: 0 auto;
+  max-width: 767px;
+  border: 10px solid #222222;
+  margin: 10px auto;
+  background: lemonchiffon;
+  /* padding: 5px; */
 }
 
 .quizTitle {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   text-align: center;
+  font-family: 'Creepster','Joti One', Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  margin-top: 0px;
+  background: tomato; 
+  padding: 25px 10px;
 }
 
 .buttonBox {
@@ -20,26 +31,80 @@ body {
 }
 
 #startBtn {
-  border: 1px solid green;
-}
-
-.quizBox {
-  border: 1px solid red;
+  /* border: 1px solid green; */
+  font-family: 'Creepster','Joti One', Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  color: black;
+  background:  tomato;
+  padding: 15px;
 }
 
 .timerBox {
   text-align: center;
+  margin-right: 150px;
+  margin-left: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #timer {
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
+  font-size: 34px;
+  font-family: 'Creepster','Joti One', Arial, Helvetica, sans-serif;
+  color: tomato; 
+  background: black;
+  padding: 5px 40px;
 }
 
 #quiz {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .question { 
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-align: center;
+  padding: 10px;
+}
+
+.buttonBox2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resultsBox {
+  text-align: center;
+  margin: 20px;
+  font-size: 22px;
+}
+
+#correct, #wrong, #blank {
+  margin: 10px;
+}
+
+#submitBtn {
+  font-family: 'Creepster','Joti One', Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  color: black;
+  background:  tomato; 
+  padding: 15px;
+}
+
+input {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+hr {
+  color: black;
+}
+
+radio {
+  background: tomato;
+  color: tomato;
 }
