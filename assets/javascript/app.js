@@ -4,7 +4,9 @@ var unanswered = 0;
 var counter = answersCorrect;
 var timer;
 var intervalId;
-var countDown = 5; // Need to set to 100 or 130
+var countDown = 30; // Need to set to 100 or 130
+var answerKey = ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a"];
+var playerAns = [];
 // var q1 = $('input[name=q1]:checked', '#quiz').val();
 // var q2 = $('input[name=q2]:checked', '#quiz').val();
 
@@ -25,6 +27,7 @@ function stop() {
   clearInterval(intervalId);
   $(".quizBox").hide();
   $(".resultsBox").show();
+  quizCheck();
 }
 
 // Hides quiz box and results box on load of page
@@ -48,18 +51,33 @@ $("#submitBtn").on("click", function() {
 
 
 
-// function quizCheck() {
-//   var q1 = $('input[name=q1]:checked').val();
-//   var q2 = $('input[name=q2]:checked').val();
-//   var q3 = $('input[name=q1]:checked').val();
-//   var q4 = $('input[name=q1]:checked').val();
-//   var q5 = $('input[name=q1]:checked').val();
-//   var q6 = $('input[name=q1]:checked').val();
-//   var q7 = $('input[name=q1]:checked').val();
-//   var q8 = $('input[name=q1]:checked').val();
-//   var q9 = $('input[name=q1]:checked').val();
-//   var q10 = $('input[name=q1]:checked').val();
-
+function quizCheck() {
+  var ans1 = $('input[name=q1]:checked').val();
+  playerAns.push(ans1);
+  console.log("the value of answer 1 is: "+ ans1);
+  // console.log("player ans arr:" + playerAns);
+  var ans2 = $('input[name=q2]:checked').val();
+  playerAns.push(ans2);
+  console.log("the value of answer 2 is: " + ans2);
+  // console.log("player ans arr:" + playerAns);
+  var ans3 = $('input[name=q3]:checked').val();
+  playerAns.push(ans3);
+  var ans4 = $('input[name=q4]:checked').val();
+  playerAns.push(ans4);
+  var ans5 = $('input[name=q5]:checked').val();
+  playerAns.push(ans5);
+  var ans6 = $('input[name=q6]:checked').val();
+  playerAns.push(ans6);
+  var ans7 = $('input[name=q7]:checked').val();
+  playerAns.push(ans7);
+  var ans8 = $('input[name=q8]:checked').val();
+  playerAns.push(ans8);
+  var ans9 = $('input[name=q9]:checked').val();
+  playerAns.push(ans9);
+  var ans10 = $('input[name=q10]:checked').val();
+  playerAns.push(ans10);
+  console.log("player ans arr:" + playerAns);
+}
 //   if (question1 === radio.value["c"]) {
 //     answersCorrect++;
 //     console.log(q1);
