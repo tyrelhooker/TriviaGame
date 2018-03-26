@@ -1,5 +1,5 @@
-var correctAns = 0;
-var wrongAns = 0;
+var answersCorrect = 0;
+var answersWrong = 0;
 var unanswered = 0;
 var counter = answersCorrect;
 var timer;
@@ -77,18 +77,22 @@ function quizCheck() {
   var ans10 = $('input[name=q10]:checked').val();
   playerAns.push(ans10);
   console.log("player ans arr:" + playerAns);
+  ansCheck();
 }
 
 function ansCheck() {
   for (i = 0; i < answerKey.length; i++) {
-    if (playerAns[i] === answerKey[i]) {
-      correctAns++;
-    } else {
-      wrongAns++;
+    if (playerAns[i] === undefined) {
+      unanswered++;
+    } else if (playerAns[i] === answerKey[i]) {
+      answersCorrect++;
+    } else if (playerAns[i] !== answerKey[i]) {
+      answersWrong++;
     }
   }
-  console.log("correct answers: " + correctAns);
-  console.log("wrong answers: " + wrongAns)
+  console.log("Num of correct ans: " + answersCorrect);
+  console.log("Num of wrong ans: " + answersWrong);
+  console.log("Num of unanswered: " + unanswered);
 }
 //   if (question1 === radio.value["c"]) {
 //     answersCorrect++;
