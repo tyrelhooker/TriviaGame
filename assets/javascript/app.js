@@ -5,7 +5,7 @@ var counter = answersCorrect;
 var timer;
 var intervalId;
 var countDown = 30; // Need to set to 100 or 130
-var answerKey = ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a"];
+var answerKey = ["d", "c", "a", "b", "c", "c", "b", "d", "c", "a"];
 var playerAns = [];
 // var q1 = $('input[name=q1]:checked', '#quiz').val();
 // var q2 = $('input[name=q2]:checked', '#quiz').val();
@@ -28,6 +28,9 @@ function stop() {
   $(".quizBox").hide();
   $(".resultsBox").show();
   quizCheck();
+  $("#correct").text("You answered " + answersCorrect + " questions!");
+  $("#wrong").text("You answered " + answersWrong + " questions incorrectly.");
+  $("#blank").text("You did not answer " + unanswered + " questions.")
 }
 
 // Hides quiz box and results box on load of page
@@ -38,6 +41,7 @@ $(".resultsBox").hide();
 $("#startBtn").on("click", function(){
   run();
   decrement();
+  $(".buttonBox").hide();
 
   // Hide the beginning game screen and show the quiz
   $("#startBtn").hide()

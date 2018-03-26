@@ -1,0 +1,45 @@
+body {
+  background: 
+}
+
+.container {
+  width: 650px;
+  border: 1px solid orange;
+  margin: 0 auto;
+}
+
+.quizTitle {
+  border: 1px solid blue;
+  text-align: center;
+}
+
+.buttonBox {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#startBtn {
+  border: 1px solid green;
+}
+
+.quizBox {
+  border: 1px solid red;
+}
+
+.timerBox {
+  text-align: center;
+}
+
+#timer {
+  border: 1px solid purple;
+}
+
+#quiz {
+  border: 1px solid blue;
+}
+
+.question { 
+  letter-spacing: 2px;
+  text-align: center;
+}
